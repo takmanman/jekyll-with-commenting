@@ -1,0 +1,29 @@
+<!-- This is comments.html-->
+
+{% capture post_directory %}{{ (page.date | date: "%Y-%m-%d" )|append: '-'|append: page.shortname }}{% endcapture %}
+
+<!--Find all files in /_data/{post_directory} and store them in array comments-->
+{% assign comments_map = site.data.comments[post_directory] %}
+{% assign comments = site.emptyArray %} 
+{% for comment in comments_map %}
+  {% assign comments = comments | push: comment[1] %}
+{% endfor %}
+
+<div class="container">
+<hr>
+	<h2>Comments</h2>
+	<ol>
+		{% assign sorted_comments = comments | sort: 'date' %}
+			{% for comment in sorted_comments %}
+    
+			<!--Render each comment-->
+			{% include comment.html %}
+			<hr>
+		{% endfor %}
+	</ol>
+ <hr>
+{% include comment-new.html %}
+ 
+</div>
+
+  

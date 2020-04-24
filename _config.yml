@@ -1,0 +1,21 @@
+author:
+    name: takmanman
+    email: takmanman.blog@gmail.com
+    github: takmanman
+
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-gist
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE	
+
+markdown: kramdown
+highlighter: rouge  
+
+emptyArray: []
+  

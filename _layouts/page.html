@@ -1,0 +1,29 @@
+<!doctype html>
+<head>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/assets/css/afloat.css">
+
+</head>
+<html> 
+  <body>	
+  
+    {%- include navbar.html -%}
+	<div class="banner">
+        <div class="container">
+            <p class = "title">{{ page.title }}</p>
+            <p class = "subtitle">{{ page.subtitle }}</p>
+        </div>
+	</div>
+	
+	<div class="container">
+		{{content}}
+	</div>
+	
+   {%- include comments.html -%}
+   
+</div>
+
+ </body>
+</html>
