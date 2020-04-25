@@ -1,7 +1,7 @@
 # jekyll-with-commenting
 A Jekyll site with a comment system
 
-This is a template jekyll site with a comment system.
+This is a template Jekyll site with a comment system.
 
 Comments are stored as YAML files and rendered at the bottom of the corresponding posts.
 
